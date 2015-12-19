@@ -37,7 +37,7 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     keywords='aas',
-    packages=find_packages(exclude=['docs', 'tests*']),
+    packages=find_packages(exclude=['docs', 'tests*', 'data', 'notebooks']),
     install_requires=['future', 'requests', 'xmltodict'],
     tests_require=['pytest'],
     # package_data={},
