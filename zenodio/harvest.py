@@ -93,20 +93,29 @@ class Datacite3Record(object):
 
     @property
     def doi(self):
+        """Digital object identifier `str`."""
         return self._r['identifier']['#text']
 
     @property
     def title(self):
-        return self._r['titles']['title']
+        """Title of resource (or first title if multiple available)."""
+        return _pluralize(self._r['titles'], 'title')[0]
 
     @property
     def abstract_html(self):
-        return self._r['descriptions']['description']['#text']
+        """Abstract text, marked up with HTML."""
+        descriptions = _pluralize(self._r['descriptions'], 'description')
+        for desc in descriptions:
+            if desc['@descriptionType'] == 'Abstract':
+                return desc['#text']
 
     @property
-    def date(self):
-        return datetime.datetime.strptime(
-            self._r['dates']['date']['#text'], '%Y-%m-%d')
+    def issue_date(self):
+        """Date when the DOI was issued."""
+        dates = _pluralize(self._r['dates'], 'date')
+        for date in dates:
+            if date['@dateType'] == 'Issued':
+                return datetime.datetime.strptime(date['#text'], '%Y-%m-%d')
 
 
 def _pluralize(value, item_key):

@@ -1,5 +1,6 @@
 import pkg_resources
 import pytest
+import datetime
 
 import xmltodict
 
@@ -54,3 +55,31 @@ def test_pluralize_multi_val():
     assert isinstance(values, list) is True
     assert values[0] == 'Sick, Jonathan'
     assert values[1] == 'Economou, Frossie'
+
+
+def test_lisa7_first_resource_metadata(lisa7_posters_xml):
+    """Test metadata retrieval for metadata in the first resource of the
+    `lisa7_posters_xml`.
+    """
+    collection = Datacite3Collection.from_collection_xml(lisa7_posters_xml)
+    record = [r for r in collection.records()][0]
+
+    assert record.title == 'Adapting educational materials in data '\
+                           'management for Astronomy graduate students'
+    assert record.issue_date == datetime.datetime(2014, 5, 26)
+    assert record.doi == '10.5281/zenodo.10165'
+    assert record.abstract_html == \
+        '<p>The aim of this poster is to explore how existing data '\
+        'management training and tools can be adapted by Astronomy '\
+        'Librarians for use in a library instructional session. Many '\
+        'drivers have contributed to the growing '\
+        'interest in data management planning, '\
+        'including increase funder requirements for data '\
+        'management plans with grant applications and an '\
+        'increased interest in libraries and information '\
+        'centers in supporting data curation services. '\
+        'Instruction is one avenue for engagement and '\
+        'outreach, and fits in nicely with the '\
+        'established tradition of librarians providing '\
+        'information literacy and bibliographic '\
+        'instruction in scientific resources.</p>'
