@@ -107,3 +107,65 @@ class Datacite3Record(object):
     def date(self):
         return datetime.datetime.strptime(
             self._r['dates']['date']['#text'], '%Y-%m-%d')
+
+
+def _pluralize(value, item_key):
+    """"Force the value of a datacite3 key to be a list.
+
+    >>> _pluralize(xml_input['authors'], 'author')
+    ['Sick, Jonathan', 'Economou, Frossie']
+
+    Background
+    ----------
+    When `xmltodict` proceses metadata, it turns XML tags into new key-value
+    pairs whenever possible, even if the value should semantically be treated
+    as a `list`.
+
+    For example
+
+    .. code-block:: xml
+
+       <authors>
+         <author>Sick, Jonathan</author>
+       </authors
+
+    Would be rendered by `xmltodict` as::
+
+       {'authors': {'author': 'Sick, Jonathan'}}
+
+    While
+
+    .. code-block:: xml
+
+       <authors>
+         <author>Sick, Jonathan</author>
+         <author>Economou, Frossie</author>
+       </authors
+
+    is rendered by `xmltodict` as::
+
+       {'authors': [{'author': ['Sick, Jonathan', 'Economou, Frossie']}}
+
+    This function ensures that values are *always* lists so that they can be
+    treated uniformly.
+
+    Parameters
+    ----------
+    value : obj
+        The value of a key from datacite metadata extracted by `xmltodict`.
+        For example, `xmldict['authors']`.
+    item_key : str
+        Name of the tag for each item; for example, with the `'authors'` key
+        the item key is `'author'`.
+
+    Returns
+    -------
+    item_values : list
+        List of values of all items.
+    """
+    v = value[item_key]
+    if not isinstance(v, list):
+        # Force a singular value to be a list
+        return [v]
+    else:
+        return v
