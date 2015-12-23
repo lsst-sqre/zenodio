@@ -4,7 +4,8 @@ import datetime
 
 import xmltodict
 
-from zenodio.harvest import Datacite3Collection, zenodo_harvest_url, _pluralize
+from zenodio.harvest import (Datacite3Collection, zenodo_harvest_url,
+                             _pluralize, Author)
 
 
 @pytest.fixture
@@ -55,6 +56,37 @@ def test_pluralize_multi_val():
     assert isinstance(values, list) is True
     assert values[0] == 'Sick, Jonathan'
     assert values[1] == 'Economou, Frossie'
+
+
+def test_author():
+    first_last = 'Sick, Jonathan'
+    affil = 'LSST'
+    orcid = '0000-0003-3001-676X'
+    a = Author(first_last, affiliation=affil, orcid=orcid)
+    assert a.first_name == 'Jonathan'
+    assert a.last_name == 'Sick'
+    assert a.orcid == orcid
+
+
+def test_author_from_minimal_author():
+    xml_data = """<creators>
+                    <creator>
+                      <creatorName>Massimino, Pietro</creatorName>
+                      <affiliation>INAF</affiliation>
+                    </creator>
+                    <creator>
+                      <creatorName>Costa, Alessandro</creatorName>
+                      <affiliation>INAF</affiliation>
+                    </creator>
+                  </creators>"""
+    xml_dict = xmltodict.parse(xml_data)
+    values = _pluralize(xml_dict['creators'], 'creator')
+    authors = [Author.from_xmldict(v) for v in values]
+    author = authors[0]
+    assert author.first_name == 'Pietro'
+    assert author.last_name == 'Massimino'
+    assert author.affiliation == 'INAF'
+    assert author.orcid is None
 
 
 def test_lisa7_first_resource_metadata(lisa7_posters_xml):

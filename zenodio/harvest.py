@@ -118,6 +118,57 @@ class Datacite3Record(object):
                 return datetime.datetime.strptime(date['#text'], '%Y-%m-%d')
 
 
+class Author(object):
+    """Metadata about an author.
+
+    Parameters
+    ----------
+    last_first : str
+        Author's name, formatted as `'Last, First'`.
+    orcid : str, optional
+        Author's ORCiD.
+    affiliation : str, optional
+        Author's affiliation.
+
+    Attributes
+    ----------
+    last_first : str
+        Author's name, formatted as `'Last, First'`.
+    orcid : str, optional
+        Author's ORCiD.
+    affiliation : str, optional
+        Author's affiliation.
+    """
+    def __init__(self, last_first, orcid=None, affiliation=None):
+        super().__init__()
+        self.last_first = last_first
+        self.orcid = orcid
+        self.affiliation = affiliation
+
+    @classmethod
+    def from_xmldict(cls, xml_dict):
+        """Create an `Author` from a datacite3 metadata converted by
+        `xmltodict`.
+        """
+        name = xml_dict['creatorName']
+
+        kwargs = {}
+        if 'affiliation' in xml_dict:
+            kwargs['affiliation'] = xml_dict['affiliation']
+
+        return cls(name, **kwargs)
+
+    @property
+    def first_name(self):
+        """Author's first name."""
+        return self.last_first.split(',')[-1].strip()
+
+    @property
+    def last_name(self):
+        """Author's last name."""
+        return self.last_first.split(',')[0].strip()
+
+
 def _pluralize(value, item_key):
     """"Force the value of a datacite3 key to be a list.
 
