@@ -115,3 +115,9 @@ def test_lisa7_first_resource_metadata(lisa7_posters_xml):
         'established tradition of librarians providing '\
         'information literacy and bibliographic '\
         'instruction in scientific resources.</p>'
+
+    authors = record.authors
+    assert len(authors) == 1
+    assert authors[0].first_name == 'Dianne'
+    assert authors[0].last_name == 'Dietrich'
+    assert authors[0].affiliation == 'Cornell University Library'

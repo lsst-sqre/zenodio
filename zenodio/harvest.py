@@ -80,16 +80,13 @@ class Datacite3Record(object):
 
     @property
     def authors(self):
-        """List of authors.
+        """List of :class:`Author`\ s.
 
-        These are `dict`\ s with keys:
-
-        - 'name'
-        - 'affiliation'
+        Authors correspond to `creators` in the Datacite schema.
         """
-        return [{'name': a['creatorName'],
-                 'affiliation': a['affiliation']}
-                for a in self._r['creators']['creator']]
+        creators = _pluralize(self._r['creators'], 'creator')
+        authors = [Author.from_xmldict(c) for c in creators]
+        return authors
 
     @property
     def doi(self):
