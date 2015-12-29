@@ -2,12 +2,12 @@
 Zenodio
 #######
 
-Input and Output for Zenodo
-===========================
+Zenodo I/O
+==========
 
 Zenodio is a simple Python interface getting data into and out of Zenodo_, the digital archive developed by CERN.
 Zenodo_ is an awesome tool for modern scientists to archive the products of research, including datasets, codes, and documents.
-Zenodio adds a layer of mechanization to Zenodo_, allowing you to grab metadata about records in a Zenodo_ collection, or upload new artifacts to Zenodo_ with smart, templated metadata specification.
+Zenodio adds a layer of mechanization to Zenodo_, allowing you to grab metadata about records in a Zenodo_ collection, or upload new artifacts to Zenodo_ with a smart Python API.
 
 We're still designing the upload API, but metadata harvesting is ready to go.
 
@@ -30,7 +30,7 @@ Or you can get the latest version from GitHub:
 
    pip install git+git://github.com/lsst-sqre/zenodio.git
 
-Developers will want to read the :ref:`developer guide <dev>`.
+Developers will want to read the :doc:`Developer Guide <developer>`.
 
 User Guide
 ==========
@@ -39,60 +39,13 @@ User Guide
    :maxdepth: 2
 
    harvest
+   developer
 
-.. _dev:
+License
+=======
 
-Developer Guide
-===============
+Copyright 2015 AURA/LSST
 
-Zenodio is built for Python 3.4+.
-Have fun.
-
-Development Environment
------------------------
-
-Fork the Zenodio repository, and clone:
-
-.. code-block:: bash
-
-   git clone https://github.com/<username>/zenodio.git
-   cd zenodio
-   git remote add upstream https://github.com/lsst-sqre/zenodio.git
-
-Setup a virtual environment, and install a development version of the code
-
-.. code-block:: bash
-
-   pip install -r requirements.txt
-   python setup.py develop
-
-Style Guide
------------
-
-Our code style is unadulterated PEP8 (*not* the LSST DM Python code style).
-Use a `Flake8 <https://flake8.readthedocs.org/en/latest/>`_ to make sure your code is up to snuff.
-
-Testing
--------
-
-For testing we use `pytest <http://pytest.org/latest/>`_.
-Don't use ``unittest2``.
-
-Run tests via:
-
-.. code-block:: bash
-
-   py.test
-
-You can find tests in the :file:`tests/` directory.
-If you need to include a sample dataset, put that data in the :file:`data/` directory.
-Use setuptools's `pkg_resources` to read that data.
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+License: MIT.
 
 .. _Zenodo: http://wwww.zenodo.org
