@@ -15,7 +15,7 @@ def read(filename):
     full_filename = os.path.join(
         os.path.abspath(os.path.dirname(__file__)),
         filename)
-    return open(full_filename).read()
+    return open(full_filename, mode='r', encoding='utf8').read()
 
 long_description = read('README.rst')
 
