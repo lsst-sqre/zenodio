@@ -15,7 +15,7 @@ def read(filename):
     full_filename = os.path.join(
         os.path.abspath(os.path.dirname(__file__)),
         filename)
-    return open(full_filename).read()
+    return open(full_filename, mode='r', encoding='utf8').read()
 
 long_description = read('README.rst')
 
@@ -37,7 +37,7 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     keywords='aas',
-    packages=find_packages(exclude=['docs', 'tests*']),
+    packages=find_packages(exclude=['docs', 'tests*', 'data', 'notebooks']),
     install_requires=['future', 'requests', 'xmltodict'],
     tests_require=['pytest'],
     # package_data={},

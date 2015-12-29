@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/xsl/oairepository/oai2.xsl.v1.0" ?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+<responseDate>2015-12-19T19:06:30Z</responseDate><request verb="ListRecords" set="user-lisa7-posters" metadataPrefix="oai_datacite3">http://zenodo.org/oai2d</request><ListRecords>
+<record><header><identifier>oai:zenodo.org:10165</identifier><datestamp>2014-05-30T08:23:41Z</datestamp><setSpec>user-zenodo</setSpec><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10165</identifier>
+      <creators>
+        <creator>
+          <creatorName>Dietrich, Dianne</creatorName>
+          <affiliation>Cornell University Library</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>Adapting educational materials in data management for Astronomy graduate students</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <subjects>
+        <subject>data management</subject>
+        <subject>graduate students</subject>
+        <subject>astronomy</subject>
+        <subject>library instruction</subject>
+      </subjects>
+      <dates>
+        <date dateType="Issued">2014-05-26</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10165</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10165/files/lisa.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;The aim of this poster is to explore how existing data management training and tools can be adapted by Astronomy Librarians for use in a library instructional session. Many drivers have contributed to the growing interest in data management planning, including increase funder requirements for data management plans with grant applications and an increased interest in libraries and information centers in supporting data curation services. Instruction is one avenue for engagement and outreach, and fits in nicely with the established tradition of librarians providing information literacy and bibliographic instruction in scientific resources.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10227</identifier><datestamp>2014-05-30T08:23:42Z</datestamp><setSpec>user-zenodo</setSpec><setSpec>openaire</setSpec><setSpec>user-lisa7-posters</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10227</identifier>
+      <creators>
+        <creator>
+          <creatorName>Massimino, Pietro</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Costa, Alessandro</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Becciani, Ugo</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Krokos, Mel</creatorName>
+          <affiliation>University of Portsmouth, UK</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Bandieramonte, Marilena</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Petta, Catia</creatorName>
+          <affiliation>University of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Riggi, Simone</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Sciacca, Eva</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Vitello, Fabio</creatorName>
+          <affiliation>INAF-Astrophysical Observatory of Catania, Italy</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>Space Mission - Learning Astrophysics through Mobile Gaming</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <subjects>
+        <subject>astronomy, mobile, iOS, astrophysics, cosmos, game</subject>
+      </subjects>
+      <contributors/>
+      <dates>
+        <date dateType="Issued">2014-05-29</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10227</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">http://zenodo.org/record/10227/files/PosterSpaceMissionLisaVII-b.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;SpaceMission is a mobile application (iOS) offering hands-on experience of astrophysical concepts using scientific simulations. The application exploits VisIVO, a suite of software tools for visual discovery and exploration of large-scale astrophysical datasets&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10273</identifier><datestamp>2014-06-03T10:48:06Z</datestamp><setSpec>openaire</setSpec><setSpec>user-lisa7-posters</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10273</identifier>
+      <creators>
+        <creator>
+          <creatorName>Mangano, Angela</creatorName>
+          <affiliation>INAF- Catania Astrophysical Observatory, Italy</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>A case of Racial Discrimination: Azeglio Bemporad, astronomer poet</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <dates>
+        <date dateType="Issued">2014-06-02</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10273</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10273/files/LISA7POSTER.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;A case of racial discrimination : Azeglio Bemporad, who worked at Catania Astrophysical Observatory until 1938, year of purge against Jews in Italy.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10277</identifier><datestamp>2014-06-03T16:51:27Z</datestamp><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10277</identifier>
+      <creators>
+        <creator>
+          <creatorName>Savaglio, Sandra</creatorName>
+          <affiliation>Max-Planck-Institute for Extraterrestrial Physics (MPE)</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Grothkopf, Uta</creatorName>
+          <affiliation>European Southern Observatory (ESO)</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>Swift Publication Statistics and the Comparison with Other Major Observatories</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <subjects>
+        <subject>Publication statistics</subject>
+        <subject>Bibliometrics</subject>
+        <subject>Telescope bibliographies</subject>
+      </subjects>
+      <contributors/>
+      <dates>
+        <date dateType="Issued">2014-06-02</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10277</alternateIdentifier>
+      </alternateIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;&lt;em&gt;Swift&lt;/em&gt; is a satellite aiming at detecting gamma-ray bursts (GRB), the most energetic stellar explosions. Launched at the end of 2004 and funded until 2016, it is equipped with &amp;gamma;-ray, X-ray, and optical-UV instrumentation and discovers, localizes and collects data for more than hundred GRBs per year.&amp;nbsp; We studied the bibliometrics produced with &lt;em&gt;Swift&lt;/em&gt; data and found that it is one of the most successful medium-size missions ever.&amp;nbsp; The production in 2005 was 24 papers, and has steadily increased to 328 in the year 2013, surpassing &lt;em&gt;Keck&lt;/em&gt;. If this trend continues, Swift may soon be approaching the publication numbers of &lt;em&gt;XMM-Newton&lt;/em&gt; and &lt;em&gt;Chandra&lt;/em&gt;.&amp;nbsp; Also the number of citations shows a great success for &lt;em&gt;Swift&lt;/em&gt;. The &lt;em&gt;Swift&lt;/em&gt; users community publishes mostly in &lt;em&gt;ApJ/S&lt;/em&gt; (almost 50% of the papers) as well as &lt;em&gt;A&amp;amp;A&lt;/em&gt; and &lt;em&gt;MNRAS&lt;/em&gt; (approx. a quarter each). In the years 2005&amp;ndash;2013, 47 papers (2.7%) were published in the high-impact journals &lt;em&gt;Nature&lt;/em&gt; and &lt;em&gt;Science&lt;/em&gt;.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10314</identifier><datestamp>2014-06-05T13:27:04Z</datestamp><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10314</identifier>
+      <creators>
+        <creator>
+          <creatorName>Gilles</creatorName>
+          <affiliation>Observatoire de Strasbourg</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>Catalog management at CDS</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <subjects>
+        <subject>VizieR software big data catalog</subject>
+      </subjects>
+      <dates>
+        <date dateType="Issued">2014-06-04</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10314</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10314/files/PosterLISAVII.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;VizieR provides access to the most complete library of published astronomical&lt;br /&gt;
+catalogues (data tables and associated data) available on line and organized&amp;nbsp;&lt;br /&gt;
+in a self-documented database (11769 catalogues in november 2013).&lt;br /&gt;
+The VizieR search engine use indexation based on several criteria which needs&amp;nbsp;&lt;br /&gt;
+the expertise of scientists and documentalists to ingest each catalog. These&amp;nbsp;&lt;br /&gt;
+metadata go with an efficient position search engine adapted to big data&amp;nbsp;&lt;br /&gt;
+(Gaia simulation catalog has more than 2billions of objects)&lt;/p&gt;
+
+&lt;p&gt;Informations in VizieR tables are well described, and can be retrieved easily.&lt;br /&gt;
+The search process gives a good visibility to catalogs with tools and protocols&lt;br /&gt;
+to disseminate data to the Virtual Observatory and thus to give the scientists&amp;nbsp;&lt;br /&gt;
+data reusable by dedicated tools (e.g.: image vizualisation tools).&lt;br /&gt;
+Also, a new functionality allows users to extract all photometric data in catalogs&lt;br /&gt;
+for a position&lt;/p&gt;
+
+&lt;p&gt;Finally, it is also through cross-identification tools that the CDS becomes a&lt;br /&gt;
+partner of &amp;nbsp;producing large data sets, such as Gaia.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10323</identifier><datestamp>2014-06-06T04:33:30Z</datestamp><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10323</identifier>
+      <creators>
+        <creator>
+          <creatorName>Mandrino, Agnese</creatorName>
+          <affiliation>INAF-Astronomical Observatory of Brera, Milan</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Gargano, Mauro</creatorName>
+          <affiliation>INAF- Astronommical Observatory of Capodimonte, Naples</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Gasperini, Antonella</creatorName>
+          <affiliation>INAF- Arcetri Astrophysical Observatory</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>Cosmic ink : fragments from the past on journal pages</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <subjects>
+        <subject>Historical Archives</subject>
+      </subjects>
+      <contributors/>
+      <dates>
+        <date dateType="Issued">2014-06-05</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10323</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10323/files/cosmik_ink_def.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;This contribution describes an editorial project created in 2012 o enhance the cultural heritage of the Italian observatories: a regular column &amp;ldquo;Cieli di inchiostro&amp;rdquo; (Cosmic ink) devoted to valorize the astronomical historical archives and published in the &amp;ldquo;Giornale di astronomia&amp;rdquo;, the journal of Societ&amp;agrave; Astronomica Italiana (Italian astronomical Society).&lt;/p&gt;
+
+&lt;p&gt;In every issue of the journal a significant bygone fragment is presented and described. A letter, a diary page, a photograph, a map, a drawing etc... is pulled out from the archival folders to talk about its history. Not only science, instruments, discoveries and observations&amp;nbsp; but also people, travels, public and private relationships, etc.. all the important scientific and human aspects an historical archives is able to offer.&lt;/p&gt;
+
+&lt;p&gt;Furthermore the aim of this project is to raise awareness of activities of reordering, inventoring and valorization of the historical archives belonging to the National Institute for Astrophysics and the Department of Physics and Astronomy of the Bologna University. One more reason for this column is to invite historians, amateurs, students to search and use the documents kept in the archives of the observatories.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10342</identifier><datestamp>2014-08-08T22:38:06Z</datestamp><setSpec>user-zenodo</setSpec><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10342</identifier>
+      <creators>
+        <creator>
+          <creatorName>Valeria Zanini, Claudia Toniolo, Antonello Satta</creatorName>
+          <affiliation>INAF Padua Astronomical Observatory</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>The Adapting Library</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <subjects>
+        <subject>adapting library</subject>
+      </subjects>
+      <dates>
+        <date dateType="Issued">2014-06-06</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10342</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10342/files/poster_OAPD_lisa_VII.jpg</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;The astronomical Libraries are those which more than any Others had to adapt over the years their functions, locations and services&amp;nbsp; to the profound changes imposed by technological progress and changing needs of patrons.&lt;/p&gt;
+
+&lt;p&gt;The Padua Astronomical Observatory&amp;#39;s Library is an example of this ability to adapt through its succession of periodical displacements inside the Specola and the Carrarese Castle.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10361</identifier><datestamp>2014-08-08T22:38:06Z</datestamp><setSpec>user-zenodo</setSpec><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10361</identifier>
+      <creators>
+        <creator>
+          <creatorName>Martín Rodríguez, Mave</creatorName>
+          <affiliation>Fundación Galileo Galilei-INAF</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Magazzù, Antonio</creatorName>
+          <affiliation>INAF</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>Creating an astronomical library for a small community. The TNG experience.</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <contributors/>
+      <dates>
+        <date dateType="Issued">2014-06-05</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10361</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10361/files/poster_martin.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;In this contribution we describe the library located in the sea level office of the Telescopio Nazionale Galileo in La Palma (Canary Islands), after two years since its creation.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10383</identifier><datestamp>2014-08-08T22:38:06Z</datestamp><setSpec>user-zenodo</setSpec><setSpec>user-lisa7-posters</setSpec><setSpec>openaire</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10383</identifier>
+      <creators>
+        <creator>
+          <creatorName>Son, Evelyne</creatorName>
+          <affiliation>Observatoire de Strasbourg</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Eisele, Aline</creatorName>
+          <affiliation>Observatoire de Strasbourg</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Schaaff, André</creatorName>
+          <affiliation>Observatoire de Strasbourg</affiliation>
+        </creator>
+        <creator>
+          <creatorName>Perret, Emmanuelle</creatorName>
+          <affiliation>Observatoire de Strasbourg</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>TWiki : A collaborative space of internal documentation, an efficient way to work together</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <contributors/>
+      <dates>
+        <date dateType="Issued">2014-06-05</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10383</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10383/files/Poster_LISA_VII.TWiki.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;The documentalists at Strasbourg astronomical Data Center treat publications to create content for the SIMBAD and VizieR databases. The publication treatment is quite complex and the ingestion process needs to be described. This requires precise knowledge and mutual support among the documentalists in interaction with computer engineers and astronomers. Documentalists at CDS have thought of an adapted way to organize and enrich their internal documentation. The &amp;ldquo;TWiki&amp;rdquo; collaborative space, recently reorganized and enriched, regroups documents about agreed-upon procedures and methods, directions for use of the software and tools, shared problems/solutions. It is a tool for sharing, preserving and enriching the common knowledge of the whole staff.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><record><header><identifier>oai:zenodo.org:10384</identifier><datestamp>2014-08-08T22:38:06Z</datestamp><setSpec>user-zenodo</setSpec><setSpec>openaire</setSpec><setSpec>user-lisa7-posters</setSpec></header><metadata><oai_datacite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.datacite.org/oai/oai-1.0/ http://schema.datacite.org/oai/oai-1.0/oai.xsd">
+  <isReferenceQuality>true</isReferenceQuality>
+  <schemaVersion>3.1</schemaVersion>
+  <datacentreSymbol>CERN.ZENODO</datacentreSymbol>
+  <payload>
+    <resource xmlns="http://datacite.org/schema/kernel-3" xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
+      <identifier identifierType="DOI">10.5281/zenodo.10384</identifier>
+      <creators>
+        <creator>
+          <creatorName>Buga, Mihaela</creatorName>
+          <affiliation>Observatoire de Strasbourg</affiliation>
+        </creator>
+      </creators>
+      <titles>
+        <title>How documentalists update SIMBAD</title>
+      </titles>
+      <publisher>Zenodo</publisher>
+      <publicationYear>2014</publicationYear>
+      <dates>
+        <date dateType="Issued">2014-06-05</date>
+      </dates>
+      <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+      <alternateIdentifiers>
+        <alternateIdentifier alternateIdentifierType="URL">http://zenodo.org/record/10384</alternateIdentifier>
+      </alternateIdentifiers>
+      <relatedIdentifiers>
+        <relatedIdentifier relationType="HasPart" relatedIdentifierType="URL">https://zenodo.org/record/10384/files/HowDocumentalistsUpdateSIMBAD.pdf</relatedIdentifier>
+      </relatedIdentifiers>
+      <rightsList>
+        <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+        <rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</rights>
+      </rightsList>
+      <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;The Strasbourg astronomical Data Center (CDS) has been existing for more than 40 years. It develops a service called SIMBAD with over 280.000 bibliographic references for over 7 million astronomical objects (18 million object identifiers). The SIMBAD astronomical database provides basic data, cross-identifications, bibliography and measurements for astronomical objects outside the solar system. SIMBAD brings to the scientific community a value-added content that is updated daily by a team of documentalists in strong interaction with astronomers and IT specialists.&lt;/p&gt;
+
+&lt;p&gt;In this poster we will explain how CDS populates SIMBAD with object citations in the main astronomical journals as well as with astronomical data and measurements. We will also explain how the identification between the objects found in the literature and those already existing in SIMBAD is made. Therefore we show the steps followed by the documentalist team to update the database using different tools developed at CDS like the sky visualiser Aladin and the large catalogues and survey database VizieR.&lt;/p&gt;
+
+&lt;p&gt;As a direct result of this team work, SIMBAD receives more than 400.000 queries per day and integrates almost 10.000 bibliographic references per year.&lt;/p&gt;</description>
+      </descriptions>
+    </resource>
+  </payload>
+</oai_datacite>
+</metadata></record><resumptionToken cursor="0" completeListSize="21" expirationDate="2015-12-20T20:06:30Z">user-lisa7-posters___DqqFqu</resumptionToken></ListRecords>
+</OAI-PMH>
+

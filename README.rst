@@ -1,3 +1,5 @@
+.. image:: https://img.shields.io/travis/lsst-sqre/zenodio.svg
+
 #########################
 zenodio — I/O with Zenodo
 #########################
