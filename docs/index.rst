@@ -32,12 +32,15 @@ Or you can get the latest version from GitHub:
 
 Developers will want to read the :ref:`developer guide <dev>`.
 
+User Guide
+==========
+
 .. toctree::
    :maxdepth: 2
-   :caption: User Guide
-   :name: part-user-guide
 
    harvest
+
+.. _dev:
 
 Developer Guide
 ===============
