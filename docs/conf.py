@@ -32,11 +32,14 @@ import shlex
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    # 'sphinx.ext.autosummary',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
+    # 'numpydoc',
+    'sphinxcontrib.napoleon',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

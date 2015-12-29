@@ -37,6 +37,8 @@ Developers will want to read the :ref:`developer guide <dev>`.
    :caption: User Guide
    :name: part-user-guide
 
+   harvest
+
 Developer Guide
 ===============
 

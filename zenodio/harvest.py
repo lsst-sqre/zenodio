@@ -1,8 +1,22 @@
 """
 Module for harvesting metadata for Community's collection from Zenodo.
 
-Our goal is to transform XML accessible at a URL into a series of Python
-objects with metadata attributes.
+Use :func:`~zenodio.harvest.harvest_collection` to download metadata for a
+Zenodo Community, by identifier. Downloaded metadata for a collection is
+encapsulated by a :class:`~zenodio.harvest.Datacite3Collection` object.
+:meth:`~zenodio.harvest.Datacite3Collection.records` generates
+:class:`~zenodio.harvest.Datacite3Record` objects for individual records in
+the Zenodo community. Using :class:`~zenodio.harvest.Datecite3Record`\ 's
+members you can access attributes about that record, such as authors, title,
+and DOI.
+
+Examples
+--------
+
+>>> import zenodio.harvest
+>>> collection = harvest_collection('lsst-dm')
+>>> for record in collection.records():
+...    print(record.title)
 """
 
 import datetime
@@ -12,12 +26,32 @@ import xmltodict
 
 
 def harvest_collection(community_name):
-    """Harvest a Zenodo community into a set of Python objects.
+    """Harvest a Zenodo community's record metadata.
+
+    Examples
+    --------
+    You can harvest record metadata for a Zenodo community by its identifier
+    name. For example, the identifier for LSST Data Management's Zenodo
+    collection is ``'lsst-dm'``:
+
+    >>> import zenodio.harvest import harvest_collection
+    >>> collection = harvest_collection('lsst-dm')
+
+    ``collection`` is a :class:`~zenodio.harvest.Datacite3Collection` instance.
+    Use its :meth:`~zenodio.harvest.Datacite3Collection.records` method to
+    generate :class:`~zenodio.harvest.Datacite3Record` objects for individual
+    records in the Zenodo collection.
 
     Parameters
     ----------
     community_name : str
         Name of the community.
+
+    Returns
+    -------
+    collection : :class:`zenodio.harvest.Datacite3Collection`
+        The :class:`~zenodio.harvest.Datacite3Collection` instance with record
+        metadata downloaded from Zenodo.
     """
     url = zenodo_harvest_url(community_name)
     r = requests.get(url)
@@ -51,6 +85,12 @@ def zenodo_harvest_url(community_name, format='oai_datacite3'):
 class Datacite3Collection(object):
     """Zenodo metadata for a Community collection derived from Datacite v3
     metadata.
+
+    Use the :meth:`~zenodio.harvest.Datacite3Collection.from_collection_xml`
+    classmethod to build a :class:`~zenodio.harvest.Datacite3Collection`
+    from XML obtained from the Zenodo OAI-PMH API. Most likely, users should
+    use :func:`~zenodio.harvest.harvest_collection` to build
+    a :class:`~zenodio.harvest.Datacite3Collection` for a Community.
     """
     def __init__(self, xml_records):
         super().__init__()
@@ -58,20 +98,53 @@ class Datacite3Collection(object):
 
     @classmethod
     def from_collection_xml(cls, xml_content):
+        """Build a :class:`~zenodio.harvest.Datacite3Collection` from
+        Datecite3-formatted XML.
+
+        Users should use :func:`zenodio.harvest.harvest_collection` to build a
+        :class:`~zenodio.harvest.Datacite3Collection` for a Community.
+
+        Parameters
+        ----------
+        xml_content : str
+            Datacite3-formatted XML content.
+
+        Returns
+        -------
+        collection : :class:`Datacite3Collection`
+            The collection parsed from Zenodo OAI-PMH XML content.
+        """
         xml_dataset = xmltodict.parse(xml_content, process_namespaces=False)
         # Unwrap the record list when harvesting a collection's datacite 3
-        print(xml_dataset['OAI-PMH'].keys())
-        print(xml_dataset['OAI-PMH']['request'].keys())
         xml_records = xml_dataset['OAI-PMH']['ListRecords']['record']  # NOQA
         return cls(xml_records)
 
     def records(self):
+        """Yield records from the collection.
+
+        Yields
+        ------
+        record : :class:`Datacite3Record`
+            The :class:`Datacite3Record` for an individual resource in
+            the Zenodo collection.
+        """
         for record in self._xml_records:
             yield Datacite3Record(record)
 
 
 class Datacite3Record(object):
-    """Zenodo metadata for a single record"""
+    """Zenodo metadata for a single record.
+
+    Use :class:`~zenodio.harvest.Datacite3Record`\ s to access metadata about a
+    record though a convient object properties.
+
+    Parameters
+    ----------
+    xml_dict : :class:`collections.OrderedDict`
+        A `dict`-like object mapping XML content for a single record (i.e.,
+        the contents of the ``record`` tag in OAI-PMH XML). This dict is
+        typically generated from :mod:`xmltodict`.
+    """
     def __init__(self, xml_dict):
         super().__init__()
         # Unwrap the record; may want to add extra robustness to this in case
@@ -80,7 +153,8 @@ class Datacite3Record(object):
 
     @property
     def authors(self):
-        """List of :class:`Author`\ s.
+        """List of :class:`~zenodio.harvest.Author`\ s
+        (:class:`zenodio.harvest.Author`).
 
         Authors correspond to `creators` in the Datacite schema.
         """
@@ -95,12 +169,15 @@ class Datacite3Record(object):
 
     @property
     def title(self):
-        """Title of resource (or first title if multiple available)."""
+        """Title of resource (`str`).
+
+        If there are multiple titles, the first title is returned.
+        """
         return _pluralize(self._r['titles'], 'title')[0]
 
     @property
     def abstract_html(self):
-        """Abstract text, marked up with HTML."""
+        """Abstract text, marked up with HTML (`str`)."""
         descriptions = _pluralize(self._r['descriptions'], 'description')
         for desc in descriptions:
             if desc['@descriptionType'] == 'Abstract':
@@ -108,7 +185,8 @@ class Datacite3Record(object):
 
     @property
     def issue_date(self):
-        """Date when the DOI was issued."""
+        """Date when the DOI was issued (:class:`datetime.datetime.Datetime`).
+        """
         dates = _pluralize(self._r['dates'], 'date')
         for date in dates:
             if date['@dateType'] == 'Issued':
@@ -117,6 +195,9 @@ class Datacite3Record(object):
 
 class Author(object):
     """Metadata about an author.
+
+    :class:`~zenodio.harvest.Author` instances are typically built by
+    :meth:`Datacite3Record.authors`.
 
     Parameters
     ----------
@@ -131,9 +212,9 @@ class Author(object):
     ----------
     last_first : str
         Author's name, formatted as `'Last, First'`.
-    orcid : str, optional
+    orcid : str
         Author's ORCiD.
-    affiliation : str, optional
+    affiliation : str
         Author's affiliation.
     """
     def __init__(self, last_first, orcid=None, affiliation=None):
@@ -146,6 +227,13 @@ class Author(object):
     def from_xmldict(cls, xml_dict):
         """Create an `Author` from a datacite3 metadata converted by
         `xmltodict`.
+
+        Parameters
+        ----------
+        xml_dict : :class:`collections.OrderedDict`
+            A `dict`-like object mapping XML content for a single record (i.e.,
+            the contents of the ``record`` tag in OAI-PMH XML). This dict is
+            typically generated from :mod:`xmltodict`.
         """
         name = xml_dict['creatorName']
 
@@ -157,12 +245,12 @@ class Author(object):
 
     @property
     def first_name(self):
-        """Author's first name."""
+        """Author's first name (`str`)."""
         return self.last_first.split(',')[-1].strip()
 
     @property
     def last_name(self):
-        """Author's last name."""
+        """Author's last name (`str`)."""
         return self.last_first.split(',')[0].strip()
 
 
