@@ -8,7 +8,7 @@ author = 'Jonathan Sick'
 author_email = 'jsick@lsst.org'
 license = 'MIT'
 url = 'https://github.com/lsst-sqre/zenodio'
-version = '0.1.0'
+version = '0.1.1.dev0'
 
 
 def read(filename):
