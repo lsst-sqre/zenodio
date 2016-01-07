@@ -30,7 +30,7 @@ def harvest_collection(community_name):
 
     Examples
     --------
-    You can harvest record metadata for a Zenodo community by its identifier
+    You can harvest record metadata for a Zenodo community via its identifier
     name. For example, the identifier for LSST Data Management's Zenodo
     collection is ``'lsst-dm'``:
 
@@ -45,7 +45,7 @@ def harvest_collection(community_name):
     Parameters
     ----------
     community_name : str
-        Name of the community.
+        Zenodo community identifier.
 
     Returns
     -------
@@ -67,9 +67,10 @@ def zenodo_harvest_url(community_name, format='oai_datacite3'):
     Parameters
     ----------
     community_name : str
-        Name of the community.
+        Zenodo community identifier.
     format : str
         OAI-PMH metadata specification name. See https://zenodo.org/dev.
+        Currently on ``oai_datacite3`` is supported.
 
     Returns
     -------

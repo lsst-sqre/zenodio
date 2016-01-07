@@ -1,15 +1,15 @@
-####################################################
-Harvesting Zenodo Metadata with OAI-PMH (Datacite 3)
-####################################################
+#####################################################
+Harvesting Zenodo Metadata with OAI-PMH (DataCite v3)
+#####################################################
 
 Zenodio's :mod:`zenodio.harvest` module provides a Pythonic interface to record metadata in a Zenodo community collection.
-Zenodio uses the standard OAI-PMH harvesting protocol (and specifically retrieves Datacite3-flavored XML; it's the best and latest metadata standard used by Zenodo).
+Zenodio uses the standard OAI-PMH harvesting protocol (and specifically retrieves DataCite v3-flavored XML; it's the best and latest metadata standard used by Zenodo).
 
 Quick Start
 ===========
 
-Download metadata for a Zenodo collection by giving its identifier.
-For example, we'll get 
+To quickly show you harvesting metadata from Zenodo works, we'll get records from from LSST Data Management's `lsst-dm <https://zenodo.org/collection/user-lsst-dm>`_ Community:
+You begin by providing the community's identifier to :func:`zenodio.harvest.harvest_collection`:
 
 .. code-block:: py
 

@@ -4,14 +4,14 @@
 zenodio — I/O with Zenodo
 #########################
 
-Python library for uploading research artifacts to Zenodo_ with their REST API and downloading artifacts from community collections with their OAI-PMH Datacite v3 harvest API.
+Python library for uploading research artifacts to Zenodo_ with their REST API and downloading artifacts from community collections with their OAI-PMH DataCite v3 harvest API.
 
-*In development.*
+Read the docs: http://zenodio.lsst.io
 
 License
 =======
 
-Copyright 2015 AURA/LSST
+Copyright 2015-2016 AURA/LSST
 
 MIT license.
 
