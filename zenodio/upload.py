@@ -8,6 +8,28 @@ import json
 import requests
 
 
+def list_depositions(token=None, api_root='http://sandbox.zenodo.org'):
+    """List your submitted depositions.
+
+    Note that unsubmitted depositions don't appear in this list.
+    In development; currently the raw json reponse is return.
+
+    Parameters
+    ----------
+    token : str, optional
+        Zenodo personal API token, obtained from
+        https://zenodo.org/account/settings/applications/tokens
+        If not provided, the token can be obtained from the ``ZENODO_TOKEN``
+        environment variable.
+    """
+    token = _get_api_token(token)
+
+    url = "{root}/api/deposit/depositions?access_token={token}"
+    r = requests.get(url.format(root=api_root, token=token))
+    print(r.status_code)  # FIXME
+    return r.json()
+
+
 class Deposition(object):
     """A Zenodo deposition, consisting of files and metadata.
 
