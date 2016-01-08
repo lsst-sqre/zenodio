@@ -13,12 +13,14 @@ class Deposition(object):
 
     Parameters
     ----------
+    deposition_id : int, option
+        Identifier for a deposition. A new deposition will be created if
+        an existing deposition ID is not provided.
     token : str, optional
         Zenodo personal API token, obtained from
         https://zenodo.org/account/settings/applications/tokens
         If not provided, the token can be obtained from the ``ZENODO_TOKEN``
         environment variable.
-
     """
     def __init__(self, deposition_id=None,
                  token=None,
@@ -34,17 +36,20 @@ class Deposition(object):
 
         if deposition_id is None:
             # create a new, empty deposition
-            self._create_deposition()
+            self._create()
         else:
             self._get_deposition(deposition_id)
 
     @property
     def id(self):
-        """ID for deposition on Zenodo (str)."""
+        """ID for deposition on Zenodo (int)."""
         return self._deposition_cache['id']
 
-    def _create_deposition(self, data=None):
+    def _create(self, data=None):
         """Create a deposition in Zenodo (that does not need to be complete).
+
+        Calls POST deposit/depositions to CREATE a new deposition.
+        https://zenodo.org/dev#collapse-create
         """
         if data is None:
             data = dict()
@@ -52,9 +57,10 @@ class Deposition(object):
         json_data = json.dumps(data)
 
         headers = {"Content-Type": "application/json"}
-        endpoint = '{root}/api/deposit/depositions?access_token={token}'
-        r = requests.post(endpoint.format(root=self._api_root,
-                                          token=self._token),
+        endpoint = 'deposit/depositions'
+        api_url = self._build_api_url(endpoint)
+        print(api_url)
+        r = requests.post(api_url,
                           data=json_data,
                           headers=headers)
         print('_create_deposition', r.status_code)  # FIXME
@@ -63,8 +69,24 @@ class Deposition(object):
     def _get_deposition(self, deposition_id):
         """Get metadata for an *existing* deposition and upload the local
         metadata cache.
+
+        Calls GET deposit/depositions/:id
+        https://zenodo.org/dev#collapse-get
         """
-        self._deposition_cache = {}  # FIXME implement GET
+        endpoint = 'deposit/depositions/{dep_id:d}'.format(
+            dep_id=deposition_id)
+        api_url = self._build_api_url(endpoint)
+        print(api_url)
+        r = requests.get(api_url)
+        print('_get_deposition', r.status_code)
+        self._deposition_cache = r.json()
+
+    def _build_api_url(self, endpoint):
+        endpoint = endpoint.lstrip('/')
+        url = '{root}/api/{endpoint}?access_token={token}'
+        return url.format(endpoint=endpoint,
+                          root=self._api_root,
+                          token=self._token)
 
 
 def _get_api_token(provided_token=None, env_var='ZENODO_TOKEN'):
