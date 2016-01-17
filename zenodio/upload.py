@@ -67,6 +67,41 @@ class Deposition(object):
         """ID for deposition on Zenodo (int)."""
         return self._deposition_cache['id']
 
+    def update_metadata(self, **kwargs):
+        """Update metadata for the deposition as key-value pairs
+
+        Uses PUT deposit/depositions/:id
+
+        The available metadata fields is available at
+        https://zenodo.org/dev#collapse-r-meta
+
+        Parameters
+        ----------
+        kwargs :
+            Metadata key-value pairs, see
+            https://zenodo.org/dev#collapse-r-dep
+        """
+        json_data = json.dumps(dict(**kwargs))
+
+        headers = {"Content-Type": "application/json"}
+        endpoint = 'deposit/depositions/{dep_id:d}'
+        api_url = self._build_api_url(endpoint)
+        print(api_url)
+        r = requests.put(api_url,
+                         data=json_data,
+                         headers=headers)
+        print('update_metatadata', r.status_code)  # FIXME
+        self._deposition_cache.update(r.json())
+
+    def upload_file(self, filepath):
+        pass
+
+    @property
+    def file_names(self):
+        """Names of files in the deposition."""
+        filenames = [f['filename'] for f in self._deposition_cache['files']]
+        return filenames
+
     def _create(self, data=None):
         """Create a deposition in Zenodo (that does not need to be complete).
 
