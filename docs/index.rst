@@ -38,6 +38,7 @@ User Guide
 .. toctree::
    :maxdepth: 2
 
+   metadata
    harvest
    developer
 
