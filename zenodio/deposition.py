@@ -5,7 +5,7 @@ Interface for uploading records to Zenodo through its RESTful API.
 import os
 import requests
 import json
-import dateutil
+from dateutil import parser
 import hashlib
 
 
@@ -132,11 +132,11 @@ class Deposition():
         self._update_attributes(r)
 
     def _update_attributes(self, r):
-        self.created = dateutil.parser.parse(r.json()['created'])
+        self.created = parser.parse(r.json()['created'])
         self.files = r.json()['files']
         self.deposition_id = r.json()['id']
         self._metadata = r.json()['metadata']
-        self.modified = dateutil.parser.parse(r.json()['modified'])
+        self.modified = parser.parse(r.json()['modified'])
         self.owner = r.json()['owner']
         self.state = r.json()['state']
         self.title = r.json()['title']
@@ -151,9 +151,11 @@ class Deposition():
             # here we comment it out.
             # self.record_url = str(r.json()['record_url'])
 
-    def upload_file(self, file_path):
+    def append_file(self, file_path):
         """
         Append a file to the Zenodo deposition.
+
+        (Called "upload" in the Zenodo API)
 
         Note: Files can only be changed if the deposition is not yet submitted.
 
